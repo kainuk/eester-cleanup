@@ -120,7 +120,8 @@ class CRM_EesterCleanup_Cleanup {
     $this->output('Remove Shirt Type');
     $this->deleteOptionGroup('shirt_type');
     $this->output('---- Data - Model ---');
-    $this->output('Drop the output table');
+    $this->output('Drop the contract payment table');
+    CRM_Core_DAO::executeQuery('drop table if exists civicrm_contract_payment');
     return $this->output;
   }
 
