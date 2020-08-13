@@ -9,7 +9,7 @@ use CRM_EesterCleanup_ExtensionUtil as E;
  *
  * @see https://docs.civicrm.org/dev/en/latest/framework/api-architecture/
  */
-function _civicrm_api3_contract_Cleanup_spec(&$spec) {
+function _civicrm_api3_contract_cleanup_spec(&$spec) {
   $spec['verbose'] = [
     'type' => CRM_Utils_Type::T_BOOLEAN,
     'title' => 'Verbose',
@@ -29,7 +29,7 @@ function _civicrm_api3_contract_Cleanup_spec(&$spec) {
  *
  * @throws API_Exception
  */
-function civicrm_api3_contract_Cleanup($params) {
+function civicrm_api3_contract_cleanup($params) {
     if(isset($params['verbose']) && $params['verbose']){
       $verbose = true;
     } else {
